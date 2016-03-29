@@ -1,0 +1,22 @@
+[
+  {
+    "@context": "http://schema.org/",
+    "@type": "FoodEstablishment",
+    "name": "富士そば 石神井公園店",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.7435211",
+      "longitude": "139.6034755"
+    }
+  },
+  {
+    "@context": "http://schema.org/",
+    "@type": "FoodEstablishment",
+    "name": "富士そば 笹塚店",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "35.6739914",
+      "longitude": "139.6652148"
+    }
+  }
+]
