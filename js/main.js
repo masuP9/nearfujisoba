@@ -1,19 +1,21 @@
 (function(d, nav){
 
-  var shopJSON = JSON.parse(d.getElementById('shopJSON').textContent);
-  var shopJSONGeo = [];
+  Vue.config.debug = true;
 
-  for (var i = shopJSON.length - 1; i >= 0; i--) {
-    shopJSONGeo.push({latitude: shopJSON[i].geo.latitude, longitude: shopJSON[i].geo.longitude});
-  }
+  var geocoder = new google.maps.Geocoder();
 
-  var app = new Vue({
-    el: '#app',
+  var shopList = new Vue({
+    el: '#shopList',
     data: {
-      shops: []
+      shops: [],
+      orderedShops: [],
+      currentPosition: {
+        latitude: "",
+        longitude: ""
+      }
     },
     created: function() {
-      this.getDistanceList()
+      this.fetchData();
     },
     watch: {
       shops: 'getDistanceList'
@@ -21,44 +23,41 @@
     methods: {
       getDistanceList: function() {
         var self = this;
+        var orderedShopsList = [];
+
+        for (var i = self.shops.length - 1; i >= 0; i--) {
+          orderedShopsList.push({
+            latitude: self.shops[i].geo.latitude,
+            longitude: self.shops[i].geo.longitude
+          });
+        }
+
         nav.geolocation.getCurrentPosition( function(position) {
-          var distanceList = geolib.orderByDistance(
+
+          var distanceList = geolib.findNearest(
             { latitude: position.coords.latitude,
               longitude: position.coords.longitude
             },
-            shopJSONGeo
+            orderedShopsList
           );
 
-          var orderedShopList = [];
+          self.orderedShops.push(self.shops[parseInt(distanceList.key)]);
+
           for (var i = distanceList.length - 1; i >= 0; i--) {
-            orderedShopList.push(shopJSON[distanceList[i].key]);
+            self.orderedShops.push(self.shops[parseInt(distanceList.key)]);
           }
-        self.shops = orderedShopList;
         });
+      },
+      fetchData: function() {
+        var xhr = new XMLHttpRequest();
+        var self = this;
+        xhr.open('GET', '/shop2.json');
+        xhr.onload = function () {
+          self.shops = JSON.parse(xhr.responseText);
+        }
+        xhr.send();
       }
     }
   });
 
-  app.shops = getDistanceList();
-
-  function getDistanceList() {
-    var self = this;
-
-    nav.geolocation.getCurrentPosition( function(position) {
-      var distanceList = geolib.orderByDistance(
-        { latitude: position.coords.latitude,
-          longitude: position.coords.longitude
-        },
-        shopJSONGeo
-      );
-
-      var orderedShopList = [];
-
-      for (var i = distanceList.length - 1; i >= 0; i--) {
-        orderedShopList.push(shopJSON[distanceList[i].key]);
-      }
-
-      self.shops = orderedShopList;
-    });
-  }
 })(document, navigator);
