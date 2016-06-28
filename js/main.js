@@ -51,7 +51,7 @@
       fetchData: function() {
         var xhr = new XMLHttpRequest();
         var self = this;
-        xhr.open('GET', '/shop2.json');
+        xhr.open('GET', 'shop2.json');
         xhr.onload = function () {
           self.shops = JSON.parse(xhr.responseText);
         }
