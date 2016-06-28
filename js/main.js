@@ -26,7 +26,7 @@
         var orderedShopsList = [];
 
         for (var i = self.shops.length - 1; i >= 0; i--) {
-          orderedShopsList.push({
+          orderedShopsList.unshift({
             latitude: self.shops[i].geo.latitude,
             longitude: self.shops[i].geo.longitude
           });
