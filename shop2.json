@@ -1770,4 +1770,200 @@
         "@type": "Organization",
         "name": "ダイタンフード株式会社"
     }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "八王子店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.656578,
+        "longitude": 139.338490
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "江戸川区西小岩1-24-1",
+    "location": "八王子市旭町2-6 第一ロダンビル",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "原町田店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.542691,
+        "longitude": 139.447252
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "町田市原町田6-7-17 ParViale",
+    "location": "JR町田駅北口109並び",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "町田店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.545343,
+        "longitude": 139.445606
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "町田市森野1-37-1 POPビル",
+    "location": "小田急線町田駅北口",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "吉祥寺井ノ頭通り店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.702303,
+        "longitude": 139.579887
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "武蔵野市吉祥寺南町1-2-7 三ツ浜ビル 1F",
+    "location": "吉祥寺駅南口　井ノ頭通り　丸井斜め向かい",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "吉祥寺サンロード店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.704123,
+        "longitude": 139.579778
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "武蔵野市吉祥寺本町1-9-10 レインボービル1階",
+    "location": "吉祥寺駅北口サンロード商店街",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "吉祥寺店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.703510,
+        "longitude": 139.579359
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "武蔵野市吉祥寺本町1-1-2",
+    "location": "吉祥寺駅北口駅前",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "秋津店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.778147, 
+        "longitude": 139.496687
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "東村山市秋津町5-8-23",
+    "location": "西武池袋線秋津駅南口前",
+    "telephone": "03-6276-3527",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "池袋ダイタンフード株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "仙川店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.662821,
+        "longitude": 139.584401
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "東京都調布市仙川町3-1-4",
+    "location": "京王線・仙川駅　改札出て右に50ｍ進み、パン屋の角を右に曲がり60ｍ先",
+    "telephone": "03-6276-3591",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタン企画株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "国立店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.699450,
+        "longitude": 139.447104
+    },
+    "address": "東京都国立市北1-6-13小林ビル",
+    "telephone": "03-6276-3591",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタン企画株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "立川店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.699913,
+        "longitude": 139.414750
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "江戸川区西小岩1-24-1",
+    "location": "小岩駅北口イトーヨーカドー横",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
 }]
