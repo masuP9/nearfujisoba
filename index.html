@@ -6,22 +6,21 @@
 <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-<script id="shopJSON" src="shop2.json" type="application/ld+json"></script>
 
 <h1>ここから近い富士そば</h1>
 <div id="app">
-
-<ol id="shopList">
-<li v-for="shop in orderedShops">
-<h2>{{ shop.name }}</h2>
+<div id="nearestShop" class="nearestShop">
+<h2 class="nearestShop__title">{{ nearestShop.name }}</h2>
+<div class="nearestShop__map iframeMap">
+<iframe class="nearestShop__mapFrame iframeMap__frame" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&amp;q=富士そば+{{ nearestShop.name }}&amp;center={{ nearestShop.geo.latitude }},{{ nearestShop.geo.longitude }}"></iframe>
+</div>
 <dl>
 <dt>latitude</dt>
-<dd>{{ shop.geo.latitude }}</dd>
+<dd>{{ nearestShop.geo.latitude }}</dd>
 <dt>longitude</dt>
-<dd>{{ shop.geo.longitude }}</dd>
+<dd>{{ nearestShop.geo.longitude }}</dd>
 </dl>
-</li>
-</ol>
+<!-- /#nearestShop --></div>
 <!-- #app --></div>
 
 <footer>

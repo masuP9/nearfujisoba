@@ -5,10 +5,11 @@
   var geocoder = new google.maps.Geocoder();
 
   var shopList = new Vue({
-    el: '#shopList',
+    el: '#nearestShop',
     data: {
       shops: [],
       orderedShops: [],
+      nearestShop: {},
       currentPosition: {
         latitude: "",
         longitude: ""
@@ -18,10 +19,10 @@
       this.fetchData();
     },
     watch: {
-      shops: 'getDistanceList'
+      shops: 'getDistance'
     },
     methods: {
-      getDistanceList: function() {
+      getDistance: function() {
         var self = this;
         var orderedShopsList = [];
 
@@ -34,17 +35,19 @@
 
         nav.geolocation.getCurrentPosition( function(position) {
 
-          var distanceList = geolib.findNearest(
+          var nearestShop = geolib.findNearest(
             { latitude: position.coords.latitude,
               longitude: position.coords.longitude
             },
             orderedShopsList
           );
 
-          self.orderedShops.push(self.shops[parseInt(distanceList.key)]);
+          self.nearestShop = self.shops[parseInt(nearestShop.key)];
 
-          for (var i = distanceList.length - 1; i >= 0; i--) {
-            self.orderedShops.push(self.shops[parseInt(distanceList.key)]);
+          self.orderedShops.push(self.shops[parseInt(nearestShop.key)]);
+
+          for (var i = nearestShop.length - 1; i >= 0; i--) {
+            self.orderedShops.push(self.shops[parseInt(nearestShop.key)]);
           }
         });
       },
