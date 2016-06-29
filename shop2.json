@@ -340,22 +340,6 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
-    "name": "新宿西口店",
-    "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 35.6894716,
-        "longitude": 139.69674140000006
-    },
-    "address": "新宿区西新宿1-13-6 浜夕ビル",
-    "location": "新宿西口ヨドバシカメラ本店先",
-    "telephone": "03-6276-3591",
-    "parentOrganization": {
-        "@type": "Organization",
-        "name": "ダイタン企画株式会社"
-    }
-}, {
-    "@context": "http://schema.org/",
-    "@type": "Restaurant",
     "name": "高田馬場駅前店",
     "geo": {
         "@type": "GeoCoordinates",
@@ -1415,8 +1399,8 @@
     "name": "武蔵小山店",
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "35.673991",
-        "longitude": "139.6034755"
+        "latitude": "35.619364",
+        "longitude": "139.704493"
     },
     "additionalProperty": {
         "@type": "PropertyValue",
