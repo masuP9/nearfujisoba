@@ -2265,4 +2265,97 @@
         "@type": "Organization",
         "name": "ダイタンイート株式会社"
     }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "柏店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.861543,
+        "longitude": 139.971803
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "千葉県柏市柏1-2-35　共同ビルサンシャ104",
+    "location": "柏駅東口出て2番街右側",
+    "telephone": "03-6276-3805",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンミール株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "千葉店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.611517,
+        "longitude": 140.116054
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "千葉県千葉市中央区富士見2-4-3 稲葉ビル",
+    "location": "JR千葉駅東口出てヨドバシカメラ向かい",
+    "telephone": "03-6276-3805",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンミール株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "津田沼店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.690995,
+        "longitude": 140.021633
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "千葉県習志野市津田沼1-2-19　つるやビル１F",
+    "location": "ＪＲ津田沼駅北口徒歩1分　東京三菱銀行向かい（新京成線方面）",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    },
+    "openingHours": "Mo-Su 5:00-25:00"
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "船橋店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.698952,
+        "longitude": 139.986451
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "千葉県船橋市本町4-41-7 ステージ船橋１F",
+    "location": "",
+    "telephone": "03-6276-3852",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタン食品株式会社"
+    }
 }]
