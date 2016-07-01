@@ -2157,4 +2157,112 @@
         "@type": "Organization",
         "name": "ダイタンフード株式会社"
     }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "伊勢佐木モール店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.445014,
+        "longitude": 139.633473
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "神奈川県横浜市中区伊勢佐木町1-3-7",
+    "location": "",
+    "telephone": "03-6276-3525",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンフード株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "綱島店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.536326,
+        "longitude": 139.634149
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "神奈川県横浜市港北区綱島西1-1-5",
+    "location": "東急東横線　綱島駅西口左手　三井住友銀行向かい",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "本厚木店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.439881,
+        "longitude": 139.364631
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "神奈川県厚木市中町2-1-17　カネカビル",
+    "location": "小田急本厚木駅北口出たマツモトキヨシ並び",
+    "telephone": "03-6276-3805",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンミール株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "元住吉店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.565648,
+        "longitude": 139.65236
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "神奈川県川崎市中原区木月1丁目",
+    "location": "越谷駅東口改札正面",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "川崎東口店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.528945,
+        "longitude": 139.698532
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "神奈川県川崎市川崎区小川町1-7 音楽堂ビル",
+    "location": "ＪＲ川崎駅さいか屋並び",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
 }]
