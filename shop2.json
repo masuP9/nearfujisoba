@@ -1966,4 +1966,195 @@
         "@type": "Organization",
         "name": "ダイタンキッチン株式会社"
     }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "川口店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.803463,
+        "longitude": 139.717814
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "川口市栄町3-5-9 ダイタン川口ビル",
+    "location": "川口駅そごうデパート隣",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "立川店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.699913,
+        "longitude": 139.414750
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "江戸川区西小岩1-24-1",
+    "location": "小岩駅北口イトーヨーカドー横",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "川越店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.909482,
+        "longitude": 139.482436
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "埼玉県川越市脇田町5-1 ウィン川越",
+    "location": "東上線・JR川越駅アトレ口先クレアモール入りすぐ左",
+    "telephone": "03-6276-3591",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタン企画株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "浦和仲町店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.859988,
+        "longitude": 139.655541
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "埼玉県さいたま市浦和区仲町1-2-10",
+    "location": "",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "北浦和店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.872209,
+        "longitude": 139.646712
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "埼玉県さいたま市浦和区北浦和3-2-4",
+    "location": "",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "浦和店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.857699,
+        "longitude": 139.656331
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "浦和区高砂1-7-10",
+    "location": "",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "大宮東口店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.906856,
+        "longitude": 139.625621
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "大宮区大門1-20-55",
+    "location": "",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
+    "name": "越谷店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.888286,
+        "longitude": 139.786596
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "埼玉県越谷市弥生町3-25　高橋ビル",
+    "location": "越谷駅東口改札正面",
+    "telephone": "03-6276-3525",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンフード株式会社"
+    }
 }]
