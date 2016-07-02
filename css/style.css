@@ -1,13 +1,22 @@
 @charset "utf-8";
 
-.nearestShop {
+#app {
   max-width: 800px;
   margin: 0 auto;
+  padding: 0 calc(10 / 320 * 100%);
+}
+
+.nf-shop {
+}
+
+.nf-shop__infoList {
+  padding-left: 1em;
 }
 
 .iframeMap {
   position: relative;
   width: 100%;
+  margin: 0;
   padding-bottom: 56.25%;
 }
 
@@ -21,4 +30,8 @@
   width: 100%;
   margin: auto;
   border-width: 0;
+}
+
+body > footer {
+  padding: 0 calc(10 / 320 * 100%);
 }

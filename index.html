@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <title>Near Fujisoba</title>
 <meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="css/normalize.css" />
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -26,7 +27,7 @@
 
 <figure is="nf-googleMap" class="nf-shop__map" :geo="shop.geo" :location-name="shop.name" :zoom="16"></figure>
 
-<ul class="sh-shop__infoList">
+<ul class="nf-shop__infoList">
 <li v-if="shop.address">住所 : {{ shop.address }}</li>
 <li v-if="shop.location">アクセス : {{ shop.location }}</li>
 <li v-if="shop.telephone">電話 : {{ shop.telephone }}</li>
@@ -48,7 +49,7 @@
 
 <footer>
 <p>© 2016 Soichi Masuda</p>
-<p>Love <a href="http://fujisoba.co.jp/">富士そば</a></p>
+<p>💓<a href="http://fujisoba.co.jp/">富士そば</a></p>
 </footer>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI"></script>
