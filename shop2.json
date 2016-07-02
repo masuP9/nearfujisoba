@@ -2209,6 +2209,7 @@
         "latitude": 35.439881,
         "longitude": 139.364631
     },
+    "paymentAccepted": ["Cash"],
     "additionalProperty": {
         "@type": "PropertyValue",
         "name": "DraftBeer",

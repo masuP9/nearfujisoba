@@ -3,7 +3,13 @@ var NfShop = Vue.extend({
   props: ["shop"]
 });
 
+var NfGoogleMap = Vue.extend({
+  template: "#nf-googleMap",
+  props: ["locationName", "geo", "zoom"]
+});
+
 Vue.component('nf-shop', NfShop);
+Vue.component('nf-googleMap', NfGoogleMap);
 
 (function(d, nav){
 
