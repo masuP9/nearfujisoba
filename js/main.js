@@ -35,15 +35,15 @@ Vue.component('nf-googleMap', NfGoogleMap);
       this.fetchData(); // データを取得
     },
     watch: {
-      shops: 'getDistance'
+      shops: 'getNearestShop'
     },
     methods: {
-      getDistance: function() {
+      getNearestShop: function() {
         var self = this;
-        var orderedShopsList = [];
+        var ShopsList = [];
 
         for (var i = self.shops.length - 1; i >= 0; i--) {
-          orderedShopsList.unshift({
+          ShopsList.unshift({
             latitude: self.shops[i].geo.latitude,
             longitude: self.shops[i].geo.longitude
           });
@@ -57,16 +57,11 @@ Vue.component('nf-googleMap', NfGoogleMap);
             { latitude: position.coords.latitude,
               longitude: position.coords.longitude
             },
-            orderedShopsList
+            ShopsList
           );
 
           self.nearestShop = self.shops[parseInt(nearestShop.key)];
 
-          self.orderedShops.push(self.shops[parseInt(nearestShop.key)]);
-
-          for (var i = nearestShop.length - 1; i >= 0; i--) {
-            self.orderedShops.push(self.shops[parseInt(nearestShop.key)]);
-          }
         }, function(err){
           self.currentPosition = err;
           console.warn('Error(' + err.code + '):' + err.message);
