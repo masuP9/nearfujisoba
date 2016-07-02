@@ -31,21 +31,44 @@ Vue.component('nf-googleMap', NfGoogleMap);
       currentPosition: {}
     },
     created: function() {
-      if(!navigator.geolocation) { // navigator.geolocation が使える端末かどうか
+      if(!nav.geolocation) { // navigator.geolocation が使える端末かどうか
         this.currentPosition = {
           code: 4
         }
         return false;
+      } else {
+        this.getCurrentPosition(); // 現在地を取得
       }
       this.fetchData(); // データを取得
     },
     watch: {
-      shops: 'getNearestShop'
+      shops: 'getNearestShop',
+      currentPosition: 'getNearestShop' // JSONデータが更新されたら一番近い店を取得
     },
     methods: {
+      getCurrentPosition: function() {
+        var self = this;
+
+        nav.geolocation.getCurrentPosition(
+          function(position) {
+            self.currentPosition = position;
+        },
+          function(err) {
+            self.currentPosition = err;
+            console.warn('Error(' + err.code + '):' + err.message);
+          }
+        );
+
+      },
       getNearestShop: function() {
         var self = this;
+
+        if(self.shops.length < 1 || !self.currentPosition.coords) {
+          return false;
+        }
+
         var ShopsList = [];
+        var orderedShops = [];
 
         for (var i = self.shops.length - 1; i >= 0; i--) {
           ShopsList.unshift({
@@ -54,23 +77,21 @@ Vue.component('nf-googleMap', NfGoogleMap);
           });
         }
 
-        nav.geolocation.getCurrentPosition(function(position) {
+        var nearestShopList = geolib.orderByDistance(
+          { latitude: self.currentPosition.coords.latitude,
+            longitude: self.currentPosition.coords.longitude
+          },
+          ShopsList
+        );
 
-          self.currentPosition = position;
+        for (var i = nearestShopList.length - 1; i >= 0; i--) {
+          orderedShops.unshift(self.shops[nearestShopList[i].key]);
+        }
 
-          var nearestShop = geolib.findNearest(
-            { latitude: position.coords.latitude,
-              longitude: position.coords.longitude
-            },
-            ShopsList
-          );
+        self.orderedShops = orderedShops;
 
-          self.nearestShop = self.shops[parseInt(nearestShop.key)];
+        self.nearestShop = orderedShops[0];
 
-        }, function(err){
-          self.currentPosition = err;
-          console.warn('Error(' + err.code + '):' + err.message);
-        });
       },
       fetchData: function() {
         var xhr = new XMLHttpRequest();

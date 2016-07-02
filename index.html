@@ -19,7 +19,7 @@
 <p v-if="currentPosition.code == 4">お使いの端末は現在地の取得に対応していません。<a href="http://fujisoba.co.jp/shop/">富士そば</a>公式ページから最寄りの店舗をお探しください。
 </p>
 
-<section class="nf-shop" is="nf-shop" :shop="nearestShop"></section>
+<section v-if="nearestShop" class="nf-shop" is="nf-shop" :shop="nearestShop"></section>
 
 <template id="nf-shop">
 <section>
@@ -46,8 +46,8 @@
 <!-- #app --></div>
 
 <footer>
-<p>© 2016 Soichi Masuda</p>
-<p>💓<a href="http://fujisoba.co.jp/">富士そば</a></p>
+<p>© 2016 <a href="http://masup.net">Soichi Masuda</a></p>
+<p>💓 <a href="http://fujisoba.co.jp/">富士そば</a></p>
 </footer>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI"></script>
