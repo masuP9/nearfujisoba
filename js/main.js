@@ -5,7 +5,12 @@ var NfShop = Vue.extend({
 
 var NfGoogleMap = Vue.extend({
   template: "#nf-googleMap",
-  props: ["locationName", "geo", "zoom"]
+  props: ["locationName", "geo", "zoom"],
+  computed: {
+    src : function(){
+      return 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&q=富士そば+' + this.locationName+ '&center=' + this.geo.latitude + ',' + this.geo.longitude + '&zoom=' + this.zoom;
+    }
+  }
 });
 
 Vue.component('nf-shop', NfShop);

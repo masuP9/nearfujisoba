@@ -39,9 +39,7 @@
 
 <template id="nf-googleMap">
 <figure class="iframeMap">
-<iframe class="iframeMap__frame"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&amp;q=富士そば+{{ locationName }}&amp;center={{ geo.latitude }},{{ geo.longitude }}&amp;zoom={{zoom}}">
-</iframe>
+<iframe class="iframeMap__frame" :src="src"></iframe>
 </figure>
 </template>
 
