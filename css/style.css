@@ -6,11 +6,25 @@ body {
   padding: 0 calc(10 / 320 * 100%);
 }
 
+body > h1 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
 .nf-shop {
+  border: 1px solid #ddd;
+  padding: .5em;
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+.nf-shop__name {
+  margin: .25em 0 calc(.25em + 10px);
+  font-size: 1.25rem;
 }
 
 .nf-shop__infoList {
-  padding-left: 1em;
+  padding-left: 1.3em;
+  font-size: .875rem;
 }
 
 .iframeMap {
