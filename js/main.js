@@ -1,11 +1,18 @@
+var NfShop = Vue.extend({
+  template: "#nf-shop",
+  props: ["shop"]
+});
+
+Vue.component('nf-shop', NfShop);
+
 (function(d, nav){
 
   Vue.config.debug = true;
 
   var geocoder = new google.maps.Geocoder();
 
-  var shopList = new Vue({
-    el: '#nearestShop',
+  var app = new Vue({
+    el: '#app',
     data: {
       shops: [],
       orderedShops: [],

@@ -8,20 +8,45 @@
 </head>
 <body>
 
-<h1>ここから近い富士そば</h1>
-<div id="app">
+<template>
 <div id="nearestShop" class="nearestShop">
+
 <h2 class="nearestShop__title">{{ nearestShop.name }}</h2>
 <div class="nearestShop__map iframeMap">
-<iframe class="nearestShop__mapFrame iframeMap__frame" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&amp;q=富士そば+{{ nearestShop.name }}&amp;center={{ nearestShop.geo.latitude }},{{ nearestShop.geo.longitude }}"></iframe>
+<iframe class="nearestShop__mapFrame iframeMap__frame" src="{{googleMapAPISrc}}place?key={{googleMapAPIKey}}&amp;q=富士そば+{{ nearestShop.name }}&amp;center={{ nearestShop.geo.latitude }},{{ nearestShop.geo.longitude }}"></iframe>
 </div>
-<dl>
-<dt>latitude</dt>
-<dd>{{ nearestShop.geo.latitude }}</dd>
-<dt>longitude</dt>
-<dd>{{ nearestShop.geo.longitude }}</dd>
-</dl>
+
+<ul>
+<li v-if="nearestShop.address">住所 : <span>{{ nearestShop.address }}</span></li>
+<li v-if="nearestShop.location">アクセス : <span>{{ nearestShop.location }}</span></li>
+<li v-if="nearestShop.parentOrganization.name">運営会社 : <span>{{ nearestShop.parentOrganization.name }}</span></li>
+</ul>
 <!-- /#nearestShop --></div>
+</template>
+
+<h1>ここから近い富士そば</h1>
+<div id="app">
+
+<section class="nf-shop" is="nf-shop" :shop="nearestShop"></section>
+
+<template id="nf-shop">
+<section>
+<h1 class="nf-shop__name">{{ shop.name }}</h1>
+<div class="nf-shop__map iframeMap">
+<iframe class="iframeMap__frame"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&amp;q=富士そば+{{ shop.name }}&amp;center={{ shop.geo.latitude }},{{ shop.geo.longitude }}">
+</iframe>
+</div>
+
+<ul class="sh-shop__infoList">
+<li v-if="shop.address">{{ shop.address }}</li>
+<li v-if="shop.location">{{ shop.location }}</li>
+<li v-if="shop.telephone">{{ shop.telephone }}</li>
+<li v-if="shop.parentOrganization.name">{{ shop.parentOrganization.name }}</li>
+</ul>
+</section>
+</template>
+
 <!-- #app --></div>
 
 <footer>
