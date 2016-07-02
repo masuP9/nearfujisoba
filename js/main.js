@@ -23,13 +23,16 @@ Vue.component('nf-googleMap', NfGoogleMap);
       shops: [],
       orderedShops: [],
       nearestShop: {},
-      currentPosition: {
-        latitude: "",
-        longitude: ""
-      }
+      currentPosition: {}
     },
     created: function() {
-      this.fetchData();
+      if(!navigator.geolocation) { // navigator.geolocation が使える端末かどうか
+        this.currentPosition = {
+          code: 4
+        }
+        return false;
+      }
+      this.fetchData(); // データを取得
     },
     watch: {
       shops: 'getDistance'
@@ -46,7 +49,9 @@ Vue.component('nf-googleMap', NfGoogleMap);
           });
         }
 
-        nav.geolocation.getCurrentPosition( function(position) {
+        nav.geolocation.getCurrentPosition(function(position) {
+
+          self.currentPosition = position;
 
           var nearestShop = geolib.findNearest(
             { latitude: position.coords.latitude,
@@ -62,6 +67,9 @@ Vue.component('nf-googleMap', NfGoogleMap);
           for (var i = nearestShop.length - 1; i >= 0; i--) {
             self.orderedShops.push(self.shops[parseInt(nearestShop.key)]);
           }
+        }, function(err){
+          self.currentPosition = err;
+          console.warn('Error(' + err.code + '):' + err.message);
         });
       },
       fetchData: function() {

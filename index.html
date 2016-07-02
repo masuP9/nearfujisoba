@@ -11,13 +11,20 @@
 <h1>ここから近い富士そば</h1>
 <div id="app">
 
+<p v-if="currentPosition.coords">{{ currentPosition.coords.latitude }}, {{ currentPosition.coords.longitude }}から一番近い富士そばは…</p>
+<p v-if="currentPosition.code == 1">一番近い富士そばを表示するには<a href="/">再読み込みをして</a>現在地の提供が必要です。</p>
+<p v-if="currentPosition.code == 2">デバイスの位置が判定できませんでした。<a href="/">再読み込みをして</a>もう一度試してください。</p>
+<p v-if="currentPosition.code == 3">現在地の取得に時間がかかって島ました。<a href="/">再読み込みをして</a>もう一度試してください。</p>
+<p v-if="currentPosition.code == 4">お使いの端末は現在地の取得に対応していません。<a href="http://fujisoba.co.jp/shop/">富士そば</a>公式ページから最寄りの店舗をお探しください。
+</p>
+
 <section class="nf-shop" is="nf-shop" :shop="nearestShop"></section>
 
 <template id="nf-shop">
 <section>
 <h1 class="nf-shop__name">{{ shop.name }}</h1>
 
-<div is="nf-googleMap" class="nf-shop__map" :geo="shop.geo" :location-name="shop.name" :zoom="16"></div>
+<figure is="nf-googleMap" class="nf-shop__map" :geo="shop.geo" :location-name="shop.name" :zoom="16"></figure>
 
 <ul class="sh-shop__infoList">
 <li v-if="shop.address">住所 : {{ shop.address }}</li>
@@ -30,11 +37,11 @@
 </template>
 
 <template id="nf-googleMap">
-<div class="iframeMap">
+<figure class="iframeMap">
 <iframe class="iframeMap__frame"
         src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&amp;q=富士そば+{{ locationName }}&amp;center={{ geo.latitude }},{{ geo.longitude }}&amp;zoom={{zoom}}">
 </iframe>
-</div>
+</figure>
 </template>
 
 <!-- #app --></div>
