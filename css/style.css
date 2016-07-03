@@ -11,6 +11,10 @@ body > h1 {
   text-align: center;
 }
 
+#app {
+  min-height: 50vh;
+}
+
 .nf-shop {
   border: 1px solid #ddd;
   padding: .5em;

@@ -7,8 +7,8 @@ var NfGoogleMap = Vue.extend({
   template: "#nf-googleMap",
   props: ["locationName", "geo", "zoom"],
   computed: {
-    src : function(){
-      return 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&q=富士そば+' + this.locationName+ '&center=' + this.geo.latitude + ',' + this.geo.longitude + '&zoom=' + this.zoom;
+    src: function() {
+      return 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&q=富士そば+' + this.locationName + '&center=' + this.geo.latitude + ',' + this.geo.longitude + '&zoom=' + this.zoom;
     }
   }
 });
@@ -16,11 +16,9 @@ var NfGoogleMap = Vue.extend({
 Vue.component('nf-shop', NfShop);
 Vue.component('nf-googleMap', NfGoogleMap);
 
-(function(d, nav){
+(function(d, nav) {
 
   Vue.config.debug = true;
-
-  var geocoder = new google.maps.Geocoder();
 
   var app = new Vue({
     el: '#app',
@@ -28,10 +26,11 @@ Vue.component('nf-googleMap', NfGoogleMap);
       shops: [],
       orderedShops: [],
       nearestShop: {},
-      currentPosition: {}
+      currentPosition: {},
+      currentPlace: {}
     },
     created: function() {
-      if(!nav.geolocation) { // navigator.geolocation が使える端末かどうか
+      if (!nav.geolocation) { // navigator.geolocation が使える端末かどうか
         this.currentPosition = {
           code: 4
         }
@@ -43,27 +42,51 @@ Vue.component('nf-googleMap', NfGoogleMap);
     },
     watch: {
       shops: 'getNearestShop',
-      currentPosition: 'getNearestShop' // JSONデータが更新されたら一番近い店を取得
+      currentPosition: function(){  // JSONデータが更新されたら一番近い店を取得
+        this.getcurrentPOsitionPlaceId();
+        this.getNearestShop();
+      }
     },
     methods: {
+      getcurrentPOsitionPlaceId: function() {
+        var geocoder = new google.maps.Geocoder;
+        var self = this;
+
+        var latlng = {
+          lat: self.currentPosition.coords.latitude,
+          lng: self.currentPosition.coords.longitude
+        };
+
+        geocoder.geocode({ 'location': latlng }, function(results, status) {
+          if (status === google.maps.GeocoderStatus.OK) {
+            if (results[1]) {
+              console.log(results[0]);
+              self.currentPlace = results[0];
+            } else {
+              window.alert('No results found');
+            }
+          } else {
+            window.alert('Geocoder failed due to: ' + status);
+          }
+        });
+      },
       getCurrentPosition: function() {
         var self = this;
 
         nav.geolocation.getCurrentPosition(
           function(position) {
             self.currentPosition = position;
-        },
+          },
           function(err) {
             self.currentPosition = err;
             console.warn('Error(' + err.code + '):' + err.message);
           }
         );
-
       },
       getNearestShop: function() {
         var self = this;
 
-        if(self.shops.length < 1 || !self.currentPosition.coords) {
+        if (self.shops.length < 1 || !self.currentPosition.coords) {
           return false;
         }
 
@@ -77,8 +100,8 @@ Vue.component('nf-googleMap', NfGoogleMap);
           });
         }
 
-        var nearestShopList = geolib.orderByDistance(
-          { latitude: self.currentPosition.coords.latitude,
+        var nearestShopList = geolib.orderByDistance({
+            latitude: self.currentPosition.coords.latitude,
             longitude: self.currentPosition.coords.longitude
           },
           ShopsList
@@ -97,7 +120,7 @@ Vue.component('nf-googleMap', NfGoogleMap);
         var xhr = new XMLHttpRequest();
         var self = this;
         xhr.open('GET', 'shop2.json');
-        xhr.onload = function () {
+        xhr.onload = function() {
           self.shops = JSON.parse(xhr.responseText);
         }
         xhr.send();
