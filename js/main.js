@@ -1,14 +1,17 @@
 var NfShop = Vue.extend({
   template: "#nf-shop",
-  props: ["shop"]
+  props: ["shop", "currentPlace"]
 });
 
 var NfGoogleMap = Vue.extend({
   template: "#nf-googleMap",
-  props: ["locationName", "geo", "zoom"],
+  props: ["locationName", "geo", "zoom", "placeid"],
   computed: {
     src: function() {
       return 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&q=富士そば+' + this.locationName + '&center=' + this.geo.latitude + ',' + this.geo.longitude + '&zoom=' + this.zoom;
+    },
+    srcDirection: function() {
+      return 'https://www.google.com/maps/embed/v1/directions?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI&origin=place_id:' + this.placeid + '&destination=富士そば' + this.locationName + '&mode=transit';
     }
   }
 });
@@ -60,7 +63,6 @@ Vue.component('nf-googleMap', NfGoogleMap);
         geocoder.geocode({ 'location': latlng }, function(results, status) {
           if (status === google.maps.GeocoderStatus.OK) {
             if (results[1]) {
-              console.log(results[0]);
               self.currentPlace = results[0];
             } else {
               window.alert('No results found');

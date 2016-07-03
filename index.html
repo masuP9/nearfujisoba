@@ -19,13 +19,13 @@
 <p v-if="currentPosition.code == 4">お使いの端末は現在地の取得に対応していません。<a href="http://fujisoba.co.jp/shop/">富士そば</a>公式ページから最寄りの店舗をお探しください。
 </p>
 
-<section v-if="nearestShop" class="nf-shop" is="nf-shop" :shop="nearestShop"></section>
+<section v-if="nearestShop" class="nf-shop" is="nf-shop" :shop="nearestShop" :current-place="currentPlace"></section>
 
 <template id="nf-shop">
 <section>
 <h1 class="nf-shop__name">{{ shop.name }}</h1>
 
-<figure is="nf-googleMap" class="nf-shop__map" :geo="shop.geo" :location-name="shop.name" :zoom="16"></figure>
+<div is="nf-googleMap" class="nf-shop__map" :placeid="currentPlace.place_id" :geo="shop.geo" :location-name="shop.name" :zoom="16"></div>
 
 <ul class="nf-shop__infoList">
 <li v-if="shop.address">住所 : {{ shop.address }}</li>
@@ -38,9 +38,13 @@
 </template>
 
 <template id="nf-googleMap">
+<div>
+<label><input type="radio" name="iframesrc" value="{{ src }}" checked="checked" v-model="iframesrc" /> Place</label>
+<label><input type="radio" name="iframesrc" value="{{ srcDirection }}" v-model="iframesrc" /> Directions</label>
 <figure class="iframeMap">
-<iframe class="iframeMap__frame" :src="src"></iframe>
+<iframe class="iframeMap__frame" :src="iframesrc"></iframe>
 </figure>
+</div>
 </template>
 
 <!-- #app --></div>
