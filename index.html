@@ -39,11 +39,21 @@
 
 <template id="nf-googleMap">
 <div>
-<label><input type="radio" name="iframesrc" value="{{ src }}" checked="checked" v-model="iframesrc" /> Place</label>
-<label><input type="radio" name="iframesrc" value="{{ srcDirection }}" v-model="iframesrc" /> Directions</label>
 <figure class="iframeMap">
-<iframe class="iframeMap__frame" :src="iframesrc"></iframe>
+<iframe class="iframeMap__frame" :src="iframesrc" id="nearestMap"></iframe>
 </figure>
+<ul class="flatList flatList--right">
+<li>
+<label class="button button--toggle button--toggleRadio">
+<input type="radio" name="iframesrc" value="{{ src }}" checked="checked" v-model="iframesrc" aria-controls="rearestMap" />場所
+</label>
+</li>
+<li>
+<label class="button button--toggle button--toggleRadio">
+<input type="radio" name="iframesrc" value="{{ srcDirection }}" v-model="iframesrc" aria-controls="rearestMap" />ルート
+</label>
+</li>
+</ul>
 </div>
 </template>
 
