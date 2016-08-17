@@ -649,6 +649,28 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "慶應三田店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.648208,
+        "longitude": 139.744315
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    },
+    "address": "東京都港区港南2-14-10",
+    "location": "三田駅A3出口　桜田通り沿い",
+    "telephone": "03-6276-3525",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンフード株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "品川店",
     "geo": {
         "@type": "GeoCoordinates",
