@@ -230,6 +230,28 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "神楽坂店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.700236,
+        "longitude": 139.742791
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "新宿区西新宿7-10-20 ワセダSTビル",
+    "location": "神楽坂下 信号近く",
+    "telephone": "03-6276-3805",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンミール株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "小滝橋店",
     "geo": {
         "@type": "GeoCoordinates",
