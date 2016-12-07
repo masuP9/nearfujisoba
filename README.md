@@ -1,0 +1,2 @@
+# nearfujisoba
+search near fujisoba
