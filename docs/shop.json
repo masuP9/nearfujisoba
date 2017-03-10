@@ -1482,6 +1482,31 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "上板橋店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.763297,
+        "longitude": 139.676045
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": [{
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },{
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    }],
+    "address": "板橋区上板橋1-27-5",
+    "telephone": "03-6276-3857",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンキッチン株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "東武練馬店",
     "geo": {
         "@type": "GeoCoordinates",
