@@ -1425,11 +1425,15 @@
         "longitude": 139.72347200000002
     },
     "paymentAccepted": ["Cash", "PASMO"],
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
+    },{
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    }],
     "address": "品川区東五反田5-27-6 第一五反田ビル",
     "location": "五反田駅東口交番向かい",
     "telephone": "03-6276-3591",
