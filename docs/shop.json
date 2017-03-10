@@ -82,8 +82,8 @@
     "name": "渋谷東口店",
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 35.6573615,
-        "longitude": 139.70353260000002
+        "latitude": 35.657293,
+        "longitude": 139.703594
     },
     "paymentAccepted": ["Cash", "PASMO"],
     "additionalProperty": {
