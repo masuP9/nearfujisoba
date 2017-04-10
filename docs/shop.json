@@ -23,6 +23,31 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "代々木八幡店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.669151,
+        "longitude": 139.688435
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "渋谷区富ヶ谷1-53-3 横川ビル",
+    "additionalProperty": [{
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },{
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    }],
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "笹塚店",
     "geo": {
         "@type": "GeoCoordinates",
