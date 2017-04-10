@@ -23,6 +23,31 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "代々木八幡店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.669151,
+        "longitude": 139.688435
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "address": "渋谷区富ヶ谷1-53-3 横川ビル",
+    "additionalProperty": [{
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },{
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    }],
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "笹塚店",
     "geo": {
         "@type": "GeoCoordinates",
@@ -2049,16 +2074,15 @@
         "longitude": 139.717814
     },
     "paymentAccepted": ["Cash", "PASMO"],
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
-    "additionalProperty": {
+    }, {
         "@type": "PropertyValue",
         "name": "Takeaway",
         "value": "true"
-    },
+    }],
     "address": "川口市栄町3-5-9 ダイタン川口ビル",
     "location": "川口駅そごうデパート隣",
     "telephone": "03-6276-3857",
@@ -2120,16 +2144,15 @@
         "longitude": 139.655541
     },
     "paymentAccepted": ["Cash", "PASMO"],
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
-    "additionalProperty": {
+    }, {
         "@type": "PropertyValue",
         "name": "Takeaway",
         "value": "true"
-    },
+    }],
     "address": "埼玉県さいたま市浦和区仲町1-2-10",
     "location": "",
     "telephone": "03-6276-3857",
@@ -2147,16 +2170,15 @@
         "longitude": 139.646712
     },
     "paymentAccepted": ["Cash", "PASMO"],
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
-    "additionalProperty": {
+    }, {
         "@type": "PropertyValue",
         "name": "Takeaway",
         "value": "true"
-    },
+    }],
     "address": "埼玉県さいたま市浦和区北浦和3-2-4",
     "location": "",
     "telephone": "03-6276-3857",
@@ -2239,16 +2261,15 @@
         "latitude": 35.445014,
         "longitude": 139.633473
     },
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
-    "additionalProperty": {
+    }, {
         "@type": "PropertyValue",
         "name": "Takeaway",
         "value": "true"
-    },
+    }],
     "address": "神奈川県横浜市中区伊勢佐木町1-3-7",
     "location": "",
     "telephone": "03-6276-3525",
@@ -2283,16 +2304,15 @@
         "longitude": 139.364631
     },
     "paymentAccepted": ["Cash"],
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
-    "additionalProperty": {
+    }, {
         "@type": "PropertyValue",
         "name": "Takeaway",
         "value": "true"
-    },
+    }],
     "address": "神奈川県厚木市中町2-1-17　カネカビル",
     "location": "小田急本厚木駅北口出たマツモトキヨシ並び",
     "telephone": "03-6276-3805",
@@ -2415,16 +2435,15 @@
         "longitude": 139.986451
     },
     "paymentAccepted": ["Cash", "PASMO"],
-    "additionalProperty": {
+    "additionalProperty": [{
         "@type": "PropertyValue",
         "name": "DraftBeer",
         "value": "true"
-    },
-    "additionalProperty": {
+    }, {
         "@type": "PropertyValue",
         "name": "Takeaway",
         "value": "true"
-    },
+    }],
     "address": "千葉県船橋市本町4-41-7 ステージ船橋１F",
     "location": "",
     "telephone": "03-6276-3852",
