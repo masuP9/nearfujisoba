@@ -129,8 +129,8 @@
     "name": "明治通り店",
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 35.6606277,
-        "longitude": 139.70778129999997
+        "latitude": 35.660178,
+        "longitude": 139.702508
     },
     "paymentAccepted": ["Cash", "PASMO"],
     "additionalProperty": {
