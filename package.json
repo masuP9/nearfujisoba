@@ -3,13 +3,25 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "config": {
+    "postcssPlugins": "--use autoprefixer"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint:json": "jsonlint src/shop.json",
+    "css": "postcss src/css/style.css $npm_package_config_postcssPlugins --output docs/css/style.css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "babel": "^6.23.0",
+    "babel-core": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "geolib": "^2.0.20",
+    "gulp": "^3.9.1",
+    "jsonlint": "^1.6.2",
+    "postcss-cli": "^3.2.0",
+    "require-dir": "^0.3.1",
     "vue": "^1.0.20"
   }
 }

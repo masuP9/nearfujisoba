@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<title>Near Fujisoba</title>
+<meta name="viewport" content="width=device-width" />
+<link rel="stylesheet" href="css/normalize.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<h1>ここから近い富士そば</h1>
+<div id="app">
+
+<p v-if="currentPlace.formatted_address">現在地（{{ currentPlace.formatted_address }}）から一番近い富士そばは…</p>
+<p v-if="currentPosition.code == 1">一番近い富士そばを表示するには<a href="/">再読み込みをして</a>現在地の提供が必要です。</p>
+<p v-if="currentPosition.code == 2">デバイスの位置が判定できませんでした。<a href="/">再読み込みをして</a>もう一度試してください。</p>
+<p v-if="currentPosition.code == 3">現在地の取得に時間がかかってしまいました。<a href="/">再読み込みをして</a>もう一度試してください。</p>
+<p v-if="currentPosition.code == 4">お使いの端末は現在地の取得に対応していません。<a href="http://fujisoba.co.jp/shop/">富士そば</a>公式ページから最寄りの店舗をお探しください。
+</p>
+
+<section v-if="nearestShop" class="nf-shop" is="nf-shop" :shop="nearestShop" :current-place="currentPlace"></section>
+
+<template id="nf-shop">
+<section>
+<h1 class="nf-shop__name">{{ shop.name }}</h1>
+
+<div is="nf-googleMap" class="nf-shop__map" :placeid="currentPlace.place_id" :geo="shop.geo" :location-name="shop.name" :zoom="16"></div>
+
+<ul class="nf-shop__infoList">
+<li v-if="shop.address">住所 : {{ shop.address }}</li>
+<li v-if="shop.location">アクセス : {{ shop.location }}</li>
+<li v-if="shop.telephone">電話 : {{ shop.telephone }}</li>
+<li v-if="shop.parentOrganization.name">運営会社 : {{ shop.parentOrganization.name }}</li>
+<li v-if="shop.paymentAccepted">支払い方法 : {{ shop.paymentAccepted }}</li>
+</ul>
+</section>
+</template>
+
+<template id="nf-googleMap">
+<div>
+<figure class="iframeMap">
+<iframe class="iframeMap__frame" :src="iframesrc" id="nearestMap"></iframe>
+</figure>
+<ul class="flatList flatList--right">
+<li>
+<label class="button button--toggle button--toggleRadio">
+<input type="radio" name="iframesrc" value="{{ src }}" checked="checked" v-model="iframesrc" aria-controls="rearestMap" />場所
+</label>
+</li>
+<li>
+<label class="button button--toggle button--toggleRadio">
+<input type="radio" name="iframesrc" value="{{ srcDirection }}" v-model="iframesrc" aria-controls="rearestMap" />ルート
+</label>
+</li>
+</ul>
+</div>
+</template>
+
+<!-- #app --></div>
+
+<footer>
+<p>© 2016 <a href="http://masup.net">Soichi Masuda</a></p>
+<p>💓 <a href="http://fujisoba.co.jp/">富士そば</a></p>
+</footer>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8JV1UkMaiLnlnIWoNsJDVMP7gic4YyTI"></script>
+<script src="js/vue.js"></script>
+<script src="js/geolib.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

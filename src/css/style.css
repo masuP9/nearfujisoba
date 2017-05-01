@@ -1,0 +1,80 @@
+@charset "utf-8";
+
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 calc(10 / 320 * 100%);
+}
+
+body > h1 {
+  font-size: 1.75rem;
+  text-align: center;
+}
+
+#app {
+  min-height: 50vh;
+}
+
+.nf-shop {
+  border: 1px solid #ddd;
+  padding: .5em;
+  box-shadow: 0 1px 1px rgba(0,0,0,.25);
+}
+
+.nf-shop__name {
+  margin: .25em 0 calc(.25em + 10px);
+  font-size: 1.25rem;
+}
+
+.nf-shop__infoList {
+  padding-left: 1.3em;
+  font-size: .875rem;
+}
+
+.iframeMap {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding-bottom: 100%;
+}
+
+.iframeMap .iframeMap__frame {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  border-width: 0;
+}
+
+.button {
+  display: inline-block;
+  padding: .25em 1em;
+  border-radius: 1.5em;
+  box-shadow: 0 0 .25em rgba(0,0,0,.3);
+  line-height: 1.5;
+}
+
+.button--toggleRadio > input[type="radio"] {
+  margin-right: .25em;
+  vertical-align: .0625em;
+}
+
+.flatList {
+  padding: 0
+}
+
+.flatList > li {
+  display: inline-block;
+}
+
+.flatList > li + li {
+  margin-left: .5em;
+}
+
+.flatList--right {
+  text-align: right;
+}
