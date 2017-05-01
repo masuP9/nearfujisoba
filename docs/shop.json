@@ -1743,6 +1743,32 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "北千住東口店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.749632,
+        "longitude": 139.805937
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": [{
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },{
+        "@type": "PropertyValue",
+        "name": "Takeaway",
+        "value": "true"
+    }],
+    "address": "足立区千住旭町41番17",
+    "location": "北千住駅東口出てすぐ",
+    "telephone": "03-6276-3525",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンフード株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "綾瀬店",
     "geo": {
         "@type": "GeoCoordinates",
