@@ -2093,6 +2093,28 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "小平店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.736769,
+        "longitude": 139.487479
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "東京都小平市美園町１丁目6-1",
+    "location": "小平駅南口、東京スター銀行並び",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "川口店",
     "geo": {
         "@type": "GeoCoordinates",
