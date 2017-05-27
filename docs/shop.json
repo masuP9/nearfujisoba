@@ -2114,6 +2114,28 @@
 }, {
     "@context": "http://schema.org/",
     "@type": "Restaurant",
+    "name": "国分寺店",
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 35.700923,
+        "longitude": 139.481050
+    },
+    "paymentAccepted": ["Cash", "PASMO"],
+    "additionalProperty": {
+        "@type": "PropertyValue",
+        "name": "DraftBeer",
+        "value": "true"
+    },
+    "address": "東京都国分寺市本町2-10-5",
+    "location": "国分寺駅北口、出て右手すぐ",
+    "telephone": "03-6276-3502",
+    "parentOrganization": {
+        "@type": "Organization",
+        "name": "ダイタンイート株式会社"
+    }
+}, {
+    "@context": "http://schema.org/",
+    "@type": "Restaurant",
     "name": "川口店",
     "geo": {
         "@type": "GeoCoordinates",
