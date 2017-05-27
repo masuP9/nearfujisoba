@@ -2074,8 +2074,8 @@
     "name": "立川店",
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": 35.699913,
-        "longitude": 139.414750
+        "latitude": 35.6999331,
+        "longitude": 139.4146074
     },
     "paymentAccepted": ["Cash", "PASMO"],
     "additionalProperty": {
@@ -2083,8 +2083,7 @@
         "name": "DraftBeer",
         "value": "true"
     },
-    "address": "江戸川区西小岩1-24-1",
-    "location": "小岩駅北口イトーヨーカドー横",
+    "address": "立川市曙町2-11-2 フロム中武ビル1Ｆ",
     "telephone": "03-6276-3857",
     "parentOrganization": {
         "@type": "Organization",
